@@ -12,26 +12,27 @@ DECaLSQuery is a Python package that allows users to query the DECaLS catalog fo
 
 
 
-Install dependencies:
+2. Install dependencies:
 pip install -r requirements.txt
 
 
 
-Usage:
-from astropy.coordinates import SkyCoord
-from decalsquery import DECaLSQuery # Define coordinates of the galaxy
-coordinates = SkyCoord(ra=173.145238,  dec=53.06792, unit='deg') # Initialize DECaLSQuery object
-query = DECaLSQuery(output_dir='downloads') # Query and download both JPG and FITS images
-query.query_region(coordinates, size=100, download_type='both', galid="example_galaxy")
+3. Usage:
+   ```bash
+   from astropy.coordinates import SkyCoord
+   from decalsquery import DECaLSQuery # Define coordinates of the galaxy
+   coordinates = SkyCoord(ra=173.145238,  dec=53.06792, unit='deg') # Initialize DECaLSQuery object
+   query = DECaLSQuery(output_dir='downloads') # Query and download both JPG and FITS images
+   query.query_region(coordinates, size=100, download_type='both', galid="example_galaxy")
 
 
 
 
-**Add `requirements.txt`**:
+4. Add `requirements.txt`:
 This file contains the necessary dependencies.
 
 ```txt
-astroquery
-astropy
-requests
+   astroquery
+   astropy
+   requests
 
