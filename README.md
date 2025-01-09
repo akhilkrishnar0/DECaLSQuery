@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 # DECaLSQuery
 =======
-# DECaLSQuery
 
 A Python utility to query and download DECaLS (Dark Energy Camera Legacy Survey) image cutouts in JPG or FITS format.
 
@@ -29,4 +28,3 @@ coords = SkyCoord(ra=10.684, dec=41.269, unit="deg")
 query = DECaLSQuery(output_dir="downloads")
 query.query_region(coords, size=256, download_type='both', galid="example")
 
->>>>>>> 85587ca (Initial commit with DECaLSquery)
