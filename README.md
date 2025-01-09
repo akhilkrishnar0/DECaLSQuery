@@ -1,32 +1,42 @@
-<<<<<<< HEAD
-# DECaLSQuery
-=======
 # DECaLSQuery
 
-A Python utility to query and download DECaLS (Dark Energy Camera Legacy Survey) image cutouts in JPG or FITS format.
-
-## Features
-- Download JPG or FITS cutouts by RA, Dec, and size.
-- Save outputs in structured directories.
+DECaLSQuery is a Python package that allows users to query the DECaLS catalog for image cutouts. This package provides an easy-to-use interface for downloading JPG and FITS images of galaxies from the DECaLS survey.
 
 ## Installation
-Clone the repository:
-```bash
-git clone <repo-url>
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/akhilkrishnar0/DECaLSQuery.git
+   cd DECaLSQuery
 
 
 
-Install required dependencies:
-
+Install dependencies:
 pip install -r requirements.txt
 
 
-Usage
-from decals_query import DECaLSQuery
+
+Usage:
 from astropy.coordinates import SkyCoord
+from decalsquery import DECaLSQuery
 
-coords = SkyCoord(ra=10.684, dec=41.269, unit="deg")
-query = DECaLSQuery(output_dir="downloads")
-query.query_region(coords, size=256, download_type='both', galid="example")
+# Define coordinates of the galaxy
+coordinates = SkyCoord(ra=173.145238,  dec=53.06792, unit='deg')
 
->>>>>>> 85587ca (Initial commit with DECaLSquery)
+# Initialize DECaLSQuery object
+query = DECaLSQuery(output_dir='downloads')
+
+# Query and download both JPG and FITS images
+query.query_region(coordinates, size=100, download_type='both', galid="example_galaxy")
+
+
+
+
+**Add `requirements.txt`**:
+This file contains the necessary dependencies.
+
+```txt
+astroquery
+astropy
+requests
+
