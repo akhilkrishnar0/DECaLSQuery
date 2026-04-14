@@ -9,6 +9,8 @@ DECaLSQuery is a Python package that allows users to query the DECaLS catalog fo
    ```bash
    git clone https://github.com/akhilkrishnar0/DECaLSQuery.git
    cd DECaLSQuery
+   pip install .
+   
 
 Unable to Install DECaLSQuery via pip see this: https://github.com/akhilkrishnar0/DECaLSQuery/issues/1
 
@@ -20,8 +22,7 @@ pip install -r requirements.txt
 3. Usage:
    ```bash
    from astropy.coordinates import SkyCoord
-   from decalsquery import DECaLSQuery
-
+   from decals_query import DECaLSQuery
    coordinates = SkyCoord(ra=173.145238, dec=53.06792, unit='deg')
 
    query = DECaLSQuery(output_dir='downloads', layer='ls-dr9')
