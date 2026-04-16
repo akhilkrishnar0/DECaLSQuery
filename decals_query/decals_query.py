@@ -1,3 +1,4 @@
+#updated code with all files from decals, maximum size 3000 pixels
 import os
 import shutil
 import requests
